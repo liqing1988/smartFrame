@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Wed Jan 10 11:26:53 CST 2018
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=xy-mybatis-generator.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

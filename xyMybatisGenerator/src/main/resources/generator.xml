@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <context id="Mysql2Tables" targetRuntime="MyBatis3">
+    <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+    <property name="javaFileEncoding" value="UTF-8"/>
+    <!-- 这里的type里写的是你的实现类的类全路径 -->
+    <commentGenerator type="utils.MyCommentGenerator"/>
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/ymxt" userId="root" password="iamtop" driverClass="com.mysql.jdbc.Driver"/>
+    <javaTypeResolver>
+      <property name="forceBigDecimals" value="false"/>
+    </javaTypeResolver>
+    <javaModelGenerator targetPackage="com.test.model" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true"/>
+      <!--  <property name="trimStrings" value="true"/> -->
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="com.test.mapper" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true"/>
+    </sqlMapGenerator>
+    
+    <javaClientGenerator targetPackage="com.test.dao" targetProject="src/main/java" type="XMLMAPPER">
+      <property name="enableSubPackages" value="true"/>
+      <property name="suppressDate" value="true"/>
+    </javaClientGenerator>
+    <table tableName="sys_role" domainObjectName="Role" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" schema="test" selectByExampleQueryId="false"/>
+  </context>
+</generatorConfiguration>
